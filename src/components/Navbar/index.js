@@ -1,5 +1,3 @@
-// components/Navbar/index.js
-
 import React from "react";
 import {
   Nav,
@@ -17,13 +15,21 @@ const Navbar = () => {
         <Bars />
 
         <NavMenu>
-          <NavLink to="/">About Me</NavLink>
-          <NavLink to="/contact-me" activeStyle>
+          <NavLink to="/" className="welcome-text">
+            About Me
+          </NavLink>
+          <NavLink to="/contact-me" activeStyle className="welcome-text">
             Contact Me
           </NavLink>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/">Download Resume</NavBtnLink>
+          <NavBtnLink
+            target="_blank"
+            to="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/adil+ata-%C5%9Fahin/6c56461a-7034-48be-b033-e6801854f397?view=html"
+            className="welcome-text"
+          >
+            Preview Resume
+          </NavBtnLink>
         </NavBtn>
       </Nav>
     </>

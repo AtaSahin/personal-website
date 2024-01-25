@@ -1,10 +1,9 @@
-// Home.js
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import ProjectsSection from "../components/ProjectsSection";
 import WorkExperienceSection from "../components/WorkExperienceSection";
 import SkillsSection from "../components/SkillsSection";
+import ContactMe from "./ContactMe";
 
 export default function Home() {
   const [welcomeText, setWelcomeText] = useState("");
@@ -20,7 +19,6 @@ export default function Home() {
           return prevText + welcomeMessage[currentIndex];
         } else {
           clearInterval(intervalId);
-          // Show description after the welcome text animation
           setShowDescription(true);
           return prevText;
         }

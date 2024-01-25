@@ -1,10 +1,9 @@
-// navbarElements.js
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   height: 85px;
   display: flex;
   justify-content: space-between;
@@ -15,6 +14,8 @@ export const Nav = styled.nav`
   width: 90%;
   box-sizing: border-box;
   margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 3D gölge */
+  border: 1px solid #fff; /* İnce beyaz sınır */
 `;
 
 export const ContactSection = styled.div`
@@ -26,7 +27,7 @@ export const ContactSection = styled.div`
 `;
 
 export const ContactLink = styled(Link)`
-  color: #fff; /* Set text color to white */
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   &:hover {
@@ -36,21 +37,28 @@ export const ContactLink = styled(Link)`
 `;
 
 export const NavLink = styled(Link)`
-  color: #fff; /* Set text color to white */
+  color: #fff;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+  height: 50%;
   cursor: pointer;
   &.active {
     color: #fff;
+    text-decoration: underline;
+  }
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    color: black;
+    border-radius: 30px;
   }
 `;
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: #fff; /* Set text color to white */
+  color: #fff;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
