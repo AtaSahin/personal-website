@@ -9,7 +9,10 @@ import portfoy6 from "../assets/projectImages/portfoy6.png";
 import portfolio7 from "../assets/projectImages/portfolio7.png";
 import portfolio8 from "../assets/projectImages/portfolio8.png";
 import portfolio9 from "../assets/projectImages/portfolio9.png";
-
+import portfolio10 from "../assets/projectImages/portfolio10.png";
+import portfolio11 from "../assets/projectImages/portfolio11.png";
+import portfolio12 from "../assets/projectImages/portfolio12.png";
+import portfolio13 from "../assets/projectImages/portfolio13.png";
 const projects = [
   {
     id: 1,
@@ -19,7 +22,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Home Decoration Website",
+    title: "Home Decoration E-Commerce Website",
     imageUrl: Portfolio2,
     link: "https://pahstudio.co/tr",
   },
@@ -58,6 +61,30 @@ const projects = [
     title: "Netflix Clone Mobile App",
     imageUrl: portfolio9,
     link: "https://github.com/AtaSahin/Netflix-Mobile-App",
+  },
+  {
+    id: 9,
+    title: "Whatsapp-Web-App",
+    imageUrl: portfolio10,
+    link: "https://github.com/AtaSahin/Whatsapp-Web-App",
+  },
+  {
+    id: 10,
+    title: "Portfolio Template Web Site",
+    imageUrl: portfolio11,
+    link: "https://github.com/AtaSahin/functionalWebSite",
+  },
+  {
+    id: 11,
+    title: "Industrial Machine E-Commerce Web Site",
+    imageUrl: portfolio12,
+    link: "https://eosmachine.com/",
+  },
+  {
+    id: 11,
+    title: "Personal Web Site",
+    imageUrl: portfolio13,
+    link: "/",
   },
 ];
 

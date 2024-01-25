@@ -18,6 +18,7 @@ const Navbar = () => {
           <NavLink to="/" className="welcome-text">
             About Me
           </NavLink>
+
           <NavLink to="/contact-me" activeStyle className="welcome-text">
             Contact Me
           </NavLink>
