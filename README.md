@@ -1,7 +1,7 @@
 
 # Portfolio Website
 
-Welcome to my personal portfolio website! This website showcases my skills, projects, and experiences in the field of web development.
+Welcome to my personal portfolio website This website showcases my skills, projects, and experiences in the field of web development.
 
 ## Table of Contents
 
@@ -10,7 +10,6 @@ Welcome to my personal portfolio website! This website showcases my skills, proj
 - [Technologies Used](#technologies-used)
 - [Project Showcase](#project-showcase)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
@@ -27,11 +26,11 @@ This portfolio website serves as a digital resume and portfolio, providing an ov
 
 ## Technologies Used
 
-- **React.js:** Front-end framework for building the user interface.
-- **React Router:** Navigation within the single-page application.
-- **Styled Components:** Styling components with styled-components library.
-- **CSS:** Additional styling and layout adjustments.
-- **JavaScript (ES6+):** Programming language for dynamic behavior.
+- **React.js** 
+- **React Router** 
+- **Styled Components** 
+- **CSS**
+- **JavaScript (ES6+)**
 
 ## Project Showcase
 
@@ -61,9 +60,6 @@ To run the project locally, follow these steps:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
-## Contributing
-
-If you'd like to contribute to this project, please follow the [Contribution Guidelines](CONTRIBUTING.md).
 
 ## License
 
