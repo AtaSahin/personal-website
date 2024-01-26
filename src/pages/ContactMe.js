@@ -4,10 +4,9 @@ import "./ContactForm.css";
 
 export const ContactMe = () => {
   const form = useRef();
-
+  const [successMessage, setSuccessMessage] = useState(false);
   const sendEmail = (e) => {
-    e.preventDefault();
-
+    setSuccessMessage(true);
     emailjs
       .sendForm(
         "service_jgnfkqw",
@@ -24,6 +23,16 @@ export const ContactMe = () => {
         }
       );
   };
+
+  if (successMessage) {
+    return (
+      <p>
+        Thank you for your message. I will get back to you as soon as
+        possible...
+      </p>
+    );
+  }
+
   return (
     <div className="contact-form-container">
       <h2>Contact Me</h2>
