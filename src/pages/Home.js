@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ProjectsSection from "../components/ProjectsSection";
 import WorkExperienceSection from "../components/WorkExperienceSection";
@@ -33,6 +34,23 @@ export default function Home() {
 
   return (
     <div className="container">
+      <Helmet>
+        <script type="text/javascript">
+          {(function (c, l, a, r, i, t, y) {
+            c[a] =
+              c[a] ||
+              function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+          })(window, document, "clarity", "script", "ksl0ocek87")}
+        </script>
+      </Helmet>
+
       <h1 className="welcome-text">{welcomeText}</h1>
 
       <section className="description-section">
