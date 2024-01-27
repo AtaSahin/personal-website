@@ -26,7 +26,7 @@ const Navbar = () => {
         <NavBtn>
           <NavBtnLink
             target="_blank"
-            to="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/adil+ata-%C5%9Fahin/6c56461a-7034-48be-b033-e6801854f397?view=html"
+            to="https://drive.google.com/file/d/1pCyrTCbgzlO9adKztKhxNAbSojqnW-Ax/view?usp=drive_link"
             className="welcome-text"
           >
             Preview Resume
