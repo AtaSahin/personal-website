@@ -1,16 +1,8 @@
 
 # React.JS Personal Website
  ## Wwbsite link: https://atasahin.dev/
-Welcome to my personal portfolio website This website showcases my skills, projects, and experiences in the field of web development.
+Welcome to my personal website This website showcases my skills, projects, and experiences in the field of web development.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Showcase](#project-showcase)
-- [Getting Started](#getting-started)
-- [License](#license)
 
 ## Introduction
 
@@ -34,7 +26,6 @@ This portfolio website serves as a digital resume and portfolio, providing an ov
 - **CSS**
 - **JavaScript (ES6+)**
 
-## Project Showcase
 
 ### E-Commerce Car Cover Website
 
@@ -56,9 +47,11 @@ and so on..
 ## Getting Started
 
 To run the project locally, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/your-username/your-portfolio.git`
-2. Navigate to the project directory: `cd your-portfolio`
+1. Clone the repository:
+````
+ `git clone https://github.com/AtaSahin/personal-website.git`
+`````
+2. Navigate to the project directory: `cd ata-portfolio`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
 
