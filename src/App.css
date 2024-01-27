@@ -83,6 +83,16 @@
   animation-delay: 1s;
   font-family: "Courier New", Courier, monospace;
 }
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .project-cards {
+    padding: 0;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+}
 
 @keyframes fadeIn {
   from {

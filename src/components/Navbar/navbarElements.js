@@ -14,8 +14,8 @@ export const Nav = styled.nav`
   width: 90%;
   box-sizing: border-box;
   margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 3D gölge */
-  border: 1px solid #fff; /* İnce beyaz sınır */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
 `;
 
 export const ContactSection = styled.div`
@@ -75,7 +75,16 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 11;
   }
 `;
 
