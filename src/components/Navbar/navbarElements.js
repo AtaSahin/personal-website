@@ -45,7 +45,6 @@ export const NavLink = styled(Link)`
   height: 50%;
   cursor: pointer;
   &.active {
-    color: #fff;
     text-decoration: underline;
   }
   &:hover {
@@ -81,6 +80,7 @@ export const NavMenu = styled.div`
     top: 85px;
     left: 0;
     width: 100%;
+
     background: rgba(0, 0, 0, 0.9);
     border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

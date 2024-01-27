@@ -1,10 +1,13 @@
+// ContactMe.js
 import React, { useRef, useState } from "react";
+import { connect } from "react-redux";
 import emailjs from "@emailjs/browser";
 import "./ContactForm.css";
 
-export const ContactMe = () => {
+export const ContactMe = ({ darkMode }) => {
   const form = useRef();
   const [successMessage, setSuccessMessage] = useState(false);
+
   const sendEmail = (e) => {
     setSuccessMessage(true);
     emailjs
@@ -26,7 +29,7 @@ export const ContactMe = () => {
 
   if (successMessage) {
     return (
-      <p>
+      <p style={{ color: darkMode ? "black" : "white" }}>
         Thank you for your message. I will get back to you as soon as
         possible...
       </p>
@@ -34,14 +37,14 @@ export const ContactMe = () => {
   }
 
   return (
-    <div className="contact-form-container">
+    <div className={`contact-form-container ${darkMode ? "dark" : "light"}`}>
       <h2>Contact Me</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
+        <label style={{ color: darkMode ? "white" : "black" }}>Name</label>
         <input type="text" name="user_name" />
-        <label>Email</label>
+        <label style={{ color: darkMode ? "white" : "black" }}>Email</label>
         <input type="email" name="user_email" />
-        <label>Message</label>
+        <label style={{ color: darkMode ? "white" : "black" }}>Message</label>
         <textarea name="message" />
         <button type="submit" value="Send">
           Send
@@ -51,4 +54,8 @@ export const ContactMe = () => {
   );
 };
 
-export default ContactMe;
+const mapStateToProps = (state) => ({
+  darkMode: state.darkMode,
+});
+
+export default connect(mapStateToProps)(ContactMe);

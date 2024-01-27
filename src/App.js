@@ -5,21 +5,28 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import UserPage from "./pages/UserPage";
 import ContactMe from "./pages/ContactMe";
-function App() {
+import { connect } from "react-redux";
+function App({ darkMode }) {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <Navbar />
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/userPage" element={<UserPage />} />
-            <Route exact path="/contact-me" element={<ContactMe />} />
-          </Routes>
-        </header>
+      <div className={`App ${darkMode ? "dark" : "light"}`}>
+        <div className="App">
+          <header className="App-header">
+            <Navbar />
+            <Routes>
+              <Route exact path="/home" element={<Home />} />
+              <Route exact path="/userPage" element={<UserPage />} />
+              <Route exact path="/contact-me" element={<ContactMe />} />
+            </Routes>
+          </header>
+        </div>
       </div>
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  darkMode: state.darkMode,
+});
+
+export default connect(mapStateToProps)(App);

@@ -1,16 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ProjectsSection from "../components/ProjectsSection";
 import WorkExperienceSection from "../components/WorkExperienceSection";
 import SkillsSection from "../components/SkillsSection";
 import ContactMe from "./ContactMe";
+import { connect } from "react-redux";
+import { toggleTheme } from "../redux/theme";
 
-export default function Home() {
+const Home = ({ darkMode, toggleTheme }) => {
   const [welcomeText, setWelcomeText] = useState("");
   const [showDescription, setShowDescription] = useState(false);
 
   useEffect(() => {
+    /*
+    (function (c, l, a, r, i, t, y) {
+      c[a] =
+        c[a] ||
+        function () {
+          (c[a].q = c[a].q || []).push(arguments);
+        };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "ksl0ocek87");
+    */
+
     const welcomeMessage = "  Adil Ata SAHIN";
     let currentIndex = 0;
 
@@ -30,27 +46,10 @@ export default function Home() {
     return () => {
       clearInterval(intervalId);
     };
-  }, []); // Empty dependency array ensures the effect runs only once..
+  }, []); // Empty dependency array ensures the effect runs only once.
 
   return (
-    <div className="container">
-      <Helmet>
-        <script type="text/javascript">
-          {(function (c, l, a, r, i, t, y) {
-            c[a] =
-              c[a] ||
-              function () {
-                (c[a].q = c[a].q || []).push(arguments);
-              };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-          })(window, document, "clarity", "script", "ksl0ocek87")}
-        </script>
-      </Helmet>
-
+    <div className={`container ${darkMode ? "dark" : "light"}`}>
       <h1 className="welcome-text">{welcomeText}</h1>
 
       <section className="description-section">
@@ -74,4 +73,9 @@ export default function Home() {
       <ProjectsSection />
     </div>
   );
-}
+};
+const mapStateToProps = (state) => ({
+  darkMode: state.darkMode,
+});
+
+export default connect(mapStateToProps)(Home);
