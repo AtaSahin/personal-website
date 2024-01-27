@@ -22,11 +22,13 @@ This portfolio website serves as a digital resume and portfolio, providing an ov
 - **Project Showcase:** Display of various projects with details and links.
 - **Work Experience:** Section showcasing professional work experiences.
 - **Skills:** Highlighting technical skills and proficiencies.
-- **Contact Form:** A contact form for visitors to reach out.
+- **Dark/Light Theme Toggle:** Toggle between dark and light themes for better readability.
+- **Contact Form:** A contact form for visitors to reach out. Email integration set.
 
 ## Technologies Used
 
-- **React.js** 
+- **React.js**
+- **Redux**
 - **React Router** 
 - **Styled Components** 
 - **CSS**
