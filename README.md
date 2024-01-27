@@ -49,7 +49,7 @@ and so on..
 To run the project locally, follow these steps:
 1. Clone the repository:
 ````
- `git clone https://github.com/AtaSahin/personal-website.git`
+ git clone https://github.com/AtaSahin/personal-website.git
 `````
 2. Navigate to the project directory: `cd ata-portfolio`
 3. Install dependencies: `npm install`
