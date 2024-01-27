@@ -30,7 +30,7 @@ export default function Home() {
     return () => {
       clearInterval(intervalId);
     };
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, []); // Empty dependency array ensures the effect runs only once..
 
   return (
     <div className="container">
