@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  position: relative;
 }
 
 .switch {
@@ -41,8 +42,22 @@
   border-radius: 50%;
 }
 
+/* New Animation Styles */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.8),
+      0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
+
 input:checked + .slider {
   background-color: #2196f3;
+  animation: glow 2s infinite;
 }
 
 input:checked + .slider:before {
@@ -71,4 +86,96 @@ input:checked + .slider:before {
 
 .light input:checked + .slider:before {
   background-color: #f0f0f0;
+}
+
+/* Toggle button adjusted for mobile browsers */
+@media (max-width: 768px) {
+  .theme-switcher {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow:
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 30px rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #2196f3;
+    animation: glow 2s infinite;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .dark .slider {
+    background-color: #333;
+  }
+
+  .dark input:checked + .slider {
+    background-color: #ffffff;
+  }
+
+  .dark input:checked + .slider:before {
+    background-color: #333;
+  }
+
+  .light .slider {
+    background-color: #000000;
+  }
+
+  .light input:checked + .slider {
+    background-color: #007bff;
+  }
+
+  .light input:checked + .slider:before {
+    background-color: #f0f0f0;
+  }
 }

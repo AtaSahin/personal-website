@@ -49,7 +49,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         </NavMenu>
 
         {/* Toggle Theme Switcher */}
-        <div className="theme-switcher">
+        <div className={`theme-switcher ${darkMode ? "" : "light-animation"}`}>
           <label className="switch">
             <input
               type="checkbox"

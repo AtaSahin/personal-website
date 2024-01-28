@@ -1,4 +1,3 @@
-// ContactMe.js
 import React, { useRef, useState } from "react";
 import { connect } from "react-redux";
 import emailjs from "@emailjs/browser";
@@ -29,7 +28,7 @@ export const ContactMe = ({ darkMode }) => {
 
   if (successMessage) {
     return (
-      <p style={{ color: darkMode ? "black" : "white" }}>
+      <p style={{ color: darkMode ? "white" : "black" }}>
         Thank you for your message. I will get back to you as soon as
         possible...
       </p>
