@@ -31,7 +31,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         <NavMenu isOpen={isOpen}>
           <NavLink
             className={`navbar ${darkMode ? "dark" : "light"}`}
-            to="/home"
+            to="/"
             activeStyle={{ textDecoration: "underline" }}
             onClick={toggleMenu}
           >

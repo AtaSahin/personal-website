@@ -14,7 +14,7 @@ function App({ darkMode }) {
           <header className="App-header">
             <Navbar />
             <Routes>
-              <Route exact path="/home" element={<Home />} />
+              <Route exact path="/" element={<Home />} />
               <Route exact path="/userPage" element={<UserPage />} />
               <Route exact path="/contact-me" element={<ContactMe />} />
             </Routes>
