@@ -63,7 +63,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         <NavBtn>
           <NavBtnLink
             target="_blank"
-            href="https://drive.google.com/file/d/1pCyrTCbgzlO9adKztKhxNAbSojqnW-Ax/view?usp=drive_link"
+            to="https://drive.google.com/file/d/1pCyrTCbgzlO9adKztKhxNAbSojqnW-Ax/view?usp=drive_link"
             className="welcome-text"
           >
             Preview Resume
